@@ -34,9 +34,9 @@ transition: 0.2s;
 
 
 .hero-img img {
-width: 100%;
-max-width: 520px;
-border-radius: 10px;
+    width: 100%;
+    max-width: 480px;
+    border-radius: 10px;
 }
 
 
@@ -82,4 +82,26 @@ text-align: center;
 }
 .hero-text h1 { font-size: 36px; }
 nav ul { display: none; }
+}
+
+/* RESPONSIVO (MOBILE) */
+@media (max-width: 768px) {
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        padding: 40px 5%;
+    }
+
+    .hero-img img {
+        width: 100%;
+        max-width: 350px;
+    }
+
+    .hero-text h1 {
+        font-size: 32px;
+    }
+
+    footer {
+        margin-top: 20px;
+    }
 }
