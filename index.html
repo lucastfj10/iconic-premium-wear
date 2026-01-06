@@ -11,6 +11,9 @@
     <title>ICONIC PREMIUM WEAR</title>
     <link rel="stylesheet" href="style.css">
     <style>
+/* Animações */
+.animate{opacity:0;transform:translateY(30px);transition:0.7s}
+.show{opacity:1;transform:translateY(0)}
         body {
             background: #000;
             color: #fff;
@@ -158,7 +161,7 @@
     <div class="mobile-menu-icon">☰</div>
 </nav>
 
-<section class="hero" id="home">
+<section class="hero animate" id="home">
     <div class="hero-text">
         <h1>ESTILO QUE FALA POR VOCÊ</h1>
         <p>Streetwear premium com essência anime e identidade forte.</p>
@@ -170,7 +173,7 @@
     </div>
 </section>
 
-<section class="drops" id="drops">
+<section class="drops animate" id="drops">
     <h2>Drops Recentes</h2>
     <div class="grid" aria-label="Galeria de produtos">
         <img src="assets/drop1.png" loading="lazy" alt="Drop 1">
@@ -183,5 +186,22 @@
     © 2026 ICONIC PREMIUM WEAR — Todos os direitos reservados.
 </footer>
 
+<script>
+// Menu Mobile
+const menuIcon = document.querySelector('.mobile-menu-icon');
+const navUl = document.querySelector('nav ul');
+menuIcon.addEventListener('click', ()=>{
+    navUl.style.display = navUl.style.display === 'flex' ? 'none' : 'flex';
+});
+
+// Animações de Scroll
+const observer = new IntersectionObserver(entries=>{
+ entries.forEach(e=>{
+   if(e.isIntersecting){ e.target.classList.add('show'); }
+ })
+})
+
+document.querySelectorAll('.animate').forEach(el=>observer.observe(el));
+</script>
 </body>
 </html>
