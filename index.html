@@ -1,6 +1,11 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
+    <!-- SEO e Acessibilidade Melhorados -->
+    <meta name="description" content="ICONIC Premium Wear — streetwear moderno com essência anime. Drops exclusivos e identidade visual forte.">
+    <meta name="keywords" content="streetwear, anime, roupas premium, moda urbana, drops, camisetas personalizadas">
+    <meta name="author" content="ICONIC Premium Wear">
+    <meta name="robots" content="index, follow">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ICONIC PREMIUM WEAR</title>
@@ -33,6 +38,20 @@
             letter-spacing: 1px;
         }
         nav ul {
+            display: flex;
+            list-style: none;
+            gap: 25px;
+        }
+        
+        /* Menu Mobile */
+        .mobile-menu-icon {
+            display: none;
+            cursor: pointer;
+        }
+        @media (max-width: 768px) {
+            nav ul { display: none; }
+            .mobile-menu-icon { display: block; }
+        } {
             display: flex;
             list-style: none;
             gap: 25px;
@@ -129,13 +148,14 @@
 </head>
 <body>
 
-<nav>
+<nav aria-label="Menu principal">
     <h1>ICONIC WEAR</h1>
     <ul>
         <li><a href="#home">Home</a></li>
         <li><a href="#drops">Drops</a></li>
         <li><a href="#contato">Contato</a></li>
     </ul>
+    <div class="mobile-menu-icon">☰</div>
 </nav>
 
 <section class="hero" id="home">
@@ -146,16 +166,16 @@
     </div>
 
     <div class="hero-img">
-        <img src="assets/1.PNG" alt="Mockup ICONIC Wear">
+        <img src="assets/1.PNG" loading="lazy" alt="Mockup ICONIC Wear">
     </div>
 </section>
 
 <section class="drops" id="drops">
     <h2>Drops Recentes</h2>
-    <div class="grid">
-        <img src="assets/drop1.png" alt="Drop 1">
-        <img src="assets/drop2.png" alt="Drop 2">
-        <img src="assets/drop3.png" alt="Drop 3">
+    <div class="grid" aria-label="Galeria de produtos">
+        <img src="assets/drop1.png" loading="lazy" alt="Drop 1">
+        <img src="assets/drop2.png" loading="lazy" alt="Drop 2">
+        <img src="assets/drop3.png" loading="lazy" alt="Drop 3">
     </div>
 </section>
 
