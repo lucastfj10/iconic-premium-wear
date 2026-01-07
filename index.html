@@ -12,23 +12,7 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <script>
-// Menu Mobile
-const menuIcon = document.querySelector('.mobile-menu-icon');
-const navUl = document.querySelector('nav ul');
-menuIcon.addEventListener('click', ()=>{
-    navUl.style.display = navUl.style.display === 'flex' ? 'none' : 'flex';
-});
 
-// Animações de Scroll
-const observer = new IntersectionObserver(entries=>{
- entries.forEach(e=>{
-   if(e.isIntersecting){ e.target.classList.add('show'); }
- })
-})
-
-document.querySelectorAll('.animate').forEach(el=>observer.observe(el));
-</script>
 
 <nav aria-label="Menu principal">
     <h1>ICONIC PREMIUM WEAR</h1>
@@ -66,7 +50,23 @@ document.querySelectorAll('.animate').forEach(el=>observer.observe(el));
         <img src="assets/drop3.png" loading="lazy" alt="Drop 3">
     </div>
 </section>
+    <script>
+// Menu Mobile
+const menuIcon = document.querySelector('.mobile-menu-icon');
+const navUl = document.querySelector('nav ul');
+menuIcon.addEventListener('click', ()=>{
+    navUl.style.display = navUl.style.display === 'flex' ? 'none' : 'flex';
+});
 
+// Animações de Scroll
+const observer = new IntersectionObserver(entries=>{
+ entries.forEach(e=>{
+   if(e.isIntersecting){ e.target.classList.add('show'); }
+ })
+})
+
+document.querySelectorAll('.animate').forEach(el=>observer.observe(el));
+</script>
 <footer>
     © 2026 ICONIC PREMIUM WEAR — Todos os direitos reservados.
 </footer>
