@@ -1,4 +1,9 @@
-
+.logo {
+    max-width: 200px;
+    width:100%;
+    
+}
+    
 .hero-text h1 {
 font-size: 52px;
 font-weight: 900;
