@@ -1,7 +1,8 @@
-.logo {
-    max-width: 80px;
-    width:50%;
-    display:inline-block;
+.logo img {
+    max-width: 20px;
+    width:auto;
+    display:block;
+    font-size:10px;
 }
     
 .hero-text h1 {
